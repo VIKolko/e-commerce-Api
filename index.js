@@ -9,6 +9,7 @@ const authRoute = require('./rootes/auth');
 const productRoute = require('./rootes/product');
 const cartRoute = require('./rootes/cart');
 const orderRoute = require('./rootes/order');
+const stripeRoute = require('./rootes/stripe');
 
 dotenv.config()
 const port = process.env.PORT||5000;
@@ -25,6 +26,7 @@ app.use("/api/users",userRoute)
 app.use("/api/products",productRoute)
 app.use("/api/carts",cartRoute)
 app.use("/api/orders",orderRoute)
+app.use("/api/stripe",stripeRoute)
 
 // check 
 app.get('/api/test',()=>console.log('tested ok'))
