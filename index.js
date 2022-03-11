@@ -7,6 +7,8 @@ const jsonParser = express.json();
 const userRoute = require('./rootes/user');
 const authRoute = require('./rootes/auth');
 const productRoute = require('./rootes/product');
+const cartRoute = require('./rootes/cart');
+const orderRoute = require('./rootes/order');
 
 dotenv.config()
 const port = process.env.PORT||5000;
@@ -21,6 +23,8 @@ app.use(express.json())
 app.use("/api/auth",authRoute)
 app.use("/api/users",userRoute)
 app.use("/api/products",productRoute)
+app.use("/api/carts",cartRoute)
+app.use("/api/orders",orderRoute)
 
 // check 
 app.get('/api/test',()=>console.log('tested ok'))
