@@ -30,7 +30,7 @@ app.use("/api/users", userRoute);
 app.use("/api/products", productRoute);
 app.use("/api/carts", cartRoute);
 app.use("/api/orders", orderRoute);
-app.use("/api/stripe", stripeRoute);
+app.use("/api/checkout", stripeRoute);
 
 // check
 // app.get("/api/test", () => console.log("tested ok"));
