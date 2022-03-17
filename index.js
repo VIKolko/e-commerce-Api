@@ -14,10 +14,10 @@ const cors = require("cors");
 
 dotenv.config();
 const port = process.env.PORT || 5000;
-const mongoUri = process.env.MONGO_URL;
+const mongoUrl = process.env.MONGO_URL;
 
 mongoose
-  .connect(mongoUri)
+  .connect(mongoUrl)
   .then(() => console.log("database connected"))
   .catch((err) => {
     console.log(err);
