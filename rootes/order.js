@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const Order = require("../models/order");
+const Order = require("../models/Order");
 const CryptoJS = require("crypto-js");
 const dotenv = require("dotenv");
 
