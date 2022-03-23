@@ -7,6 +7,7 @@ const mongoose = require("mongoose");
 //REGISTER
 router.post("/register", async (req, res) => {
   const newUser = new User({
+    fullname: req.body.fullname,
     username: req.body.username,
     email: req.body.email,
     password: CryptoJS.AES.encrypt(
